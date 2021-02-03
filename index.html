@@ -5,73 +5,85 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
     <style>
+	::-webkit-scrollbar {
+		  width: 10px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {		  
+		background: #f1f1f1; 
+	}
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		  background: #888; 
+	}
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		  background: #555; 
+	}
     	button {
         	background-color: #EEEEEE;
-			font-family: 'JetBrains Mono', monospace;
-			font-size: 25;
-			border: none;
-			margin: 0px;
-			height: 40px;
-			padding: 0px;
-			outline: none;
-			user-select: none;
-		}
-		body {
-			background-color: black;
-			font-family: 'JetBrains Mono', monospace;
-			line-height: 1.2;
-			font-size: 18;
-			overflow-x: hidden;
-		}
-		.placeholder:empty:before  {
-			content: attr(data-placeholder);
-		}
-		.placeholder:empty  {
-			content: attr(data-placeholder);
-		}
-		.codewindow {
-			float: right;
-			background-color: #888888;
-			position: relative;
-
-			width: calc(100% - 35px);
-			top: 0px;
-			resize: none;
-			overflow: hidden;
-
-			box-sizing: border-box;
-			color: white;
-			outline: none;
-
-			margin: 0px;
-			border: 0px;
-			padding: 0px;
-		}
-      .lineNumber {
-        float: left;
-        background-color: #000000;
-        position: relative;
-        right: 5px;
-        text-align: right;
-        color: white;
-        width: 35px;
-
-        margin: 0px;
-        border: 0px;
-        padding: 0px;
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 25;
+		border: none;
+		margin: 0px;
+		height: 40px;
+		padding: 0px;
+		outline: none;
+		user-select: none;
+	}
+	body {
+		background-color: black;
+		font-family: 'JetBrains Mono', monospace;
+		line-height: 1.2;
+		font-size: 18;
+		overflow-x: hidden;
+	}
+	.placeholder:empty:before  {
+		content: attr(data-placeholder);
+	}
+	.placeholder:empty  {
+		content: attr(data-placeholder);
+	}
+	.codewindow {
+		float: right;
+		background-color: #888888;
+		position: relative;
+		width: calc(100% - 35px);	
+		top: 0px;
+		resize: none;
+		overflow: hidden;
+		box-sizing: border-box;
+		color: white;
+		outline: none;
+		margin: 0px;
+		border: 0px;
+		padding: 0px;
+	}
+	.lineNumber {
+		float: left;
+		background-color: #000000;
+		position: relative;
+		right: 5px;
+        	text-align: right;
+	        color: white;
+	        width: 35px;
+ 		margin: 0px;
+        	border: 0px;
+        	padding: 0px;
       }
       .derconsole {
-        position: absolute;
-        bottom: 0px;
-        height: 100px;
-        left: 0px;
-        text-align: center;
-        background-color: grey;
-        width: 100%;
-        color: red;
-        padding: 0px;
-        overflow-x: ;
-        overflow-y: scroll;
+	      position: absolute;
+	      bottom: 0px;
+	      height: 100px;
+	      left: 0px;
+	      text-align: center;
+	      background-color: grey;
+   	      width: 100%;
+	      color: red;
+	      padding: 0px;
+	      overflow-x: hidden;
+	      overflow-y: scroll;
       }
     </style>
   </head>
