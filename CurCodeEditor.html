@@ -1,57 +1,51 @@
 <html>
-
   <head>
-    <title>code editor</title>
+  	<title>code editor</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
     <style>
-      button {
-        background-color: #EEEEEE;
-        font-family: 'JetBrains Mono', monospace;
+    	button {
+        	background-color: #EEEEEE;
+			font-family: 'JetBrains Mono', monospace;
+			font-size: 25;
+			border: none;
+			margin: 0px;
+			height: 40px;
+			padding: 0px;
+			outline: none;
+			user-select: none;
+		}
+		body {
+			background-color: black;
+			font-family: 'JetBrains Mono', monospace;
+			line-height: 1.2;
+			font-size: 18;
+			overflow-x: hidden;
+		}
+		.placeholder:empty:before  {
+			content: attr(data-placeholder);
+		}
+		.placeholder:empty  {
+			content: attr(data-placeholder);
+		}
+		.codewindow {
+			float: right;
+			background-color: #888888;
+			position: relative;
 
+			width: calc(100% - 35px);
+			top: 0px;
+			resize: none;
+			overflow: hidden;
 
-        font-size: 25;
-        border: none;
-        margin: 0px;
-        width: 100%;
-        height: 40px;
-        padding: 0px;
-        outline: none;
-        user-select: none;
-      }
+			box-sizing: border-box;
+			color: white;
+			outline: none;
 
-      body {
-        background-color: black;
-        font-family: 'JetBrains Mono', monospace;
-        line-height: 1.2;
-        font-size: 18;
-        overflow-x: hidden;
-      }
-			.placeholder:empty:before  {
-				content: attr(data-placeholder);
-			}
-			.placeholder:empty  {
-				content: attr(data-placeholder);
-			}
-      .codewindow {
-        float: right;
-        background-color: #888888;
-        position: relative;
-
-        width: calc(100% - 35px);
-        top: 0px;
-        resize: none;
-        overflow: hidden;
-
-        box-sizing: border-box;
-        color: white;
-        outline: none;
-
-        margin: 0px;
-        border: 0px;
-        padding: 0px;
-      }
-
+			margin: 0px;
+			border: 0px;
+			padding: 0px;
+		}
       .lineNumber {
         float: left;
         background-color: #000000;
@@ -65,7 +59,6 @@
         border: 0px;
         padding: 0px;
       }
-
       .derconsole {
         position: absolute;
         bottom: 0px;
@@ -79,23 +72,18 @@
         overflow-x: ;
         overflow-y: scroll;
       }
-
     </style>
-
   </head>
-
   <body>
-    <button onclick="run();" id="btn"> Run program </button>
+	<div class="inputline placeholder"  contenteditable="true" data-placeholder="program 1"></div> 
+	<div class="placeholder" data-placeholder="program 1no running programs"></div>
+    <button onclick="run();" style="width: 100%;" id="btn"> Run program </button>
     <div style="background-color:#006600; width:100%; hieght: calc(100% - 50px);">
-      <div class="codewindow placeholder" oninput="ontextinput(); " contenteditable data-placeholder="console.log('hi');" id="text" spellcheck="false">
-
-      </div>
+      <div class="codewindow placeholder" oninput="ontextinput(); " contenteditable data-placeholder="console.log('hi');" id="text" spellcheck="false"></div>
       <div class="lineNumber" id="lineNo">1</div>
     </div>
-    <div id="con" class="derconsole placeholder" data-placeholder="nothing to see here." >
-      
-    </div>
-		
+    <div id="con" class="derconsole placeholder" data-placeholder="nothing to see here." ></div>
+	
     <script id="main script, do not tamper">
       <!--console controller -->
 console.olog = console.log;
