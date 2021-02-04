@@ -1,0 +1,85 @@
+::-webkit-scrollbar {
+		  width: 10px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {		  
+		background: grey; 
+	}
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		  background: white; 
+	}
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		  background: white; 
+	}
+    	button {
+        	background-color: #EEEEEE;
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 25;
+		border: none;
+		margin: 0px;
+		height: 40px;
+		padding: 0px;
+		outline: none;
+		user-select: none;
+	}
+	body {
+		background-color: black;
+		font-family: 'JetBrains Mono', monospace;
+		line-height: 1.2;
+		font-size: 18;
+		overflow-x: hidden;
+	}
+	.placeholder:empty:before  {
+		content: attr(data-placeholder);
+	}
+	.placeholder:empty  {
+		content: attr(data-placeholder);
+	}
+  .writeableDiv{
+    resize: none;
+		overflow: hidden;
+		box-sizing: border-box;
+    background-color: #888888;
+  }
+	.codewindow {
+		float: right;
+		
+		position: relative;
+		width: calc(100% - 35px);	
+		top: 10px;
+		
+		color: white;
+		outline: none;
+		margin: 0px;
+		border: 0px;
+		padding: 0px;
+	}
+	.lineNumber {
+		float: left;
+		background-color: #000000;
+		position: relative;
+		right: 5px;
+    top:10px;
+        	text-align: right;
+	        color: white;
+	        width: 35px;
+ 		margin: 0px;
+        	border: 0px;
+        	padding: 0px;
+      }
+      .derconsole {
+	      position: absolute;
+	      bottom: 0px;
+	      height: 100px;
+	      left: 0px;
+	      text-align: center;
+	      background-color: grey;
+   	      width: 100%;
+	      color: red;
+	      padding: 0px;
+	      overflow-x: hidden;
+	      overflow-y: scroll;
+      }
