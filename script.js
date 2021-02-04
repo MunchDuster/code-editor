@@ -1,5 +1,3 @@
-  
-
   //button and line no
   var heightLimit = {
     val: 50
