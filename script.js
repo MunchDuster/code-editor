@@ -44,18 +44,11 @@ function ontextinput() {
   lineNos.innerText = Nos;
   lineNos.style.marginTop = (-lineNos.clientHieght).toString() + "px";
 }
-function run() {
-  var scrit = document.createElement("script");
-  document.body.append(scrit);
-  scrit.innerHTML =
-    "\ntry{\nfunction " +
-    pgname.innerText +
-    "(){\n" +
-    text.innerText +
-    "\n}\n" +
-    pgname.innerText +
-    "();\n}catch(err){\nconsole.log(err);\n}\n";
+function addto(obj) {
+  var scrit = document.createElement("div");
+  obj.innerHTML += textarea.innerText;
 }
+
 
 ontextinput();
 onLoad();

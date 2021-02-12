@@ -13,6 +13,9 @@
 ::-webkit-scrollbar-thumb:hover {
 	  background: white; 
 }
+button:hover{
+	background-color: #BBBBBB;
+}
 button {
     background-color: #EEEEEE;
 	font-family: 'JetBrains Mono', monospace;
@@ -30,6 +33,7 @@ body {
 	line-height: 1.2;
 	font-size: 18;
 	overflow-x: hidden;
+	color: white;
 }
 .writeableDiv{
 	resize: none;
@@ -42,7 +46,7 @@ body {
 	position: relative;
 	width: calc(100% - 35px);	
 	top: 10px;
-	color: white;
+	
 	outline: none;
 	margin: 0px;
 	border: 0px;
@@ -61,9 +65,13 @@ body {
 	border: 0px;
 	padding: 0px;
 }
+.visible{
+	display: inline;
+}
+.invisible{
+	display: none;
+}
 .derconsole {
-	
-	
 	height: 100px;
 	
 	text-align: center;

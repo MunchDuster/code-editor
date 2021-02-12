@@ -1,27 +1,33 @@
 <html>
   <head>
   	<title>code editor</title>
-    <!--link1:https://static.wikia.nocookie.net/surrealmemes/images/0/09/Meme_Man_HD.png/revision/latest?cb=20190103112747 -->
-    <!--link2 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW4dxMhE4ZTihOC6KYoDdf7KPEXXvWJYiUWQ&usqp=CAU -->
-    <link rel="shortcut icon" type="image/x-icon" href="https://static.wikia.nocookie.net/surrealmemes/images/0/09/Meme_Man_HD.png/revision/latest?cb=20190103112747" />
+    <link rel="shortcut icon" type="image/x-icon" href="meme man.jpg" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" >
     <link rel="stylesheet" href="style.css">
   </head>
   <body spellcheck="false">
   <div style="position:fixed; height:20px; width:70px; background-color:grey; top:0px; right:0px;text-align:center; ">
-  V1.4
+  ALPHA
   </div>
 	<div class="noSpecialCharacters placeholder writeableDiv" style="width:200px;" id="pgname"data-maxlength="18"contenteditable="true" data-placeholder="program1"></div> 
 	<div id="programList"class="placeholder" data-placeholder="program 1"></div>
-    <button onclick="run();" style="width: 100%;" id="btn"> Run program </button>
+  <div style="text-align: center;">
+    <button onclick="addto(document.body);" style="width: 25%;" id="btn">Add to body</button>
+    <button onclick="addto(document.head);;" style="width: 25%;" id="btn">Add to head</button>
+    <button onclick="reset();" style="width: 25%;" id="btn">Reset</button>
+  </div>
+    <br>
     <div style="background-color:#000000; width:100%; height: calc(100% - 50px);">
-      <div class="codewindow placeholder" oninput="ontextinput(); " contenteditable data-placeholder="console.log('hi');" id="text" ></div>
+      <div class="codewindow placeholder" style="border-bottom: 2px solid white;" oninput="ontextinput(); " contenteditable data-placeholder="console.log('hi');" id="text" ></div>
       <div class="lineNumber" id="lineNo">1</div>
     </div>
-	<button style="padding:5px;"
-		onclick="javascript:document.getElementById('con').innerHTML = '';">Clear</button>
-    <div id="con" class="derconsole" ></div>
+	  
+    <button style="width: 50px;" onclick="unhide();"> < 
+        <button style="padding:5px;" class="invisible" onclick="document.getElementById('con').innerHTML = '';">Clear</button>
+        <div id="con" class="derconsole invisible" ></div>
+    </button>
+
     <script src="script.js"></script>
   </body>
 </html>
