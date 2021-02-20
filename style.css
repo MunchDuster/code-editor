@@ -3,15 +3,15 @@
 }
 /* Track */
 ::-webkit-scrollbar-track {		  
-	background: grey; 
+	background: white; 
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	  background: white; 
+	  background: grey; 
 }	
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	  background: white; 
+	  background: grey; 
 }
 button {
     background-color: #EEEEEE;
